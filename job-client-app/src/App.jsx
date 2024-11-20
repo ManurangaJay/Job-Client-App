@@ -1,24 +1,20 @@
+// src/App.jsx
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
-
-import "./App.css"; // Import global styles
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "../components/home/HomePage";
+import LoginPage from "../components/loginPage/LoginPage";
+import RegisterPage from "../components/registerPage/RegisterPage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="app-container">
-      {/* Mount Navbar at the top */}
-      <Navbar />
-
-      {/* Main content area */}
-      <main className="main-content">
-        <h1>Welcome to Jobify</h1>
-        <p>Find and apply for your dream job!</p>
-      </main>
-
-      {/* Mount Footer at the bottom */}
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </Router>
   );
 }
 

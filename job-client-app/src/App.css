@@ -16,12 +16,11 @@
 
 .main-content {
   flex: 1;
-  max-width: 1280px; /* Center content within max width */
-  margin: 0 auto; /* Center the content */
+  max-width: 1280px; 
+  margin: 0 auto; 
   padding: 1.5rem;
 }
 
-/* Body styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -29,7 +28,6 @@ body {
   color: #333;
 }
 
-/* Logo styles */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -60,7 +58,6 @@ body {
   }
 }
 
-/* Card and text styling */
 .card {
   padding: 2em;
 }

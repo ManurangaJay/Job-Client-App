@@ -1,17 +1,16 @@
-/* src/components/Footer.css */
 .footer {
     background-color: #27001e;
     color: white;
     text-align: center;
     padding: 2rem 1.5rem;
-    width: 100%; /* Ensure full width */
-    box-sizing: border-box; /* Include padding in the width */
-    margin-top: auto; /* Push footer to the bottom */
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: auto;
   }
   
   .footer-content {
     display: flex;
-    flex-wrap: wrap; /* Ensure the columns stack on smaller screens */
+    flex-wrap: wrap; 
     justify-content: space-between;
     gap: 2rem;
     max-width: 1200px;
@@ -49,7 +48,6 @@
     text-decoration: underline;
   }
   
-  /* Footer bottom content */
   .footer-bottom {
     margin-top: 2rem;
     font-size: 0.9rem;
