@@ -5,9 +5,9 @@
     background-color: #27001e;
     padding: 0.8rem 1.5rem;
     color: white;
-    width: 100%; 
-    box-sizing: border-box; 
-    position: sticky; 
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
     top: 0;
   }
   
@@ -23,15 +23,40 @@
     display: flex;
     gap: 1rem;
   }
+
   
   .navbar-links li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.5s;
   }
   
   .navbar-links li a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+
+  }
+  
+  .navbar-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    background-color: #340028;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-btn:hover {
+    background-color: #440235;
+    transform: scale(1.1);
     color: #ffd700;
   }
   

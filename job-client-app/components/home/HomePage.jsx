@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import "./HomePage.css";
@@ -9,7 +8,7 @@ const HomePage = () => {
     <div className="home-page">
       <Navbar />
       <section className="hero-section">
-        <div className="hero-left">
+        <div className="hero-content">
           <input
             type="text"
             className="search-bar"
@@ -31,16 +30,20 @@ const HomePage = () => {
               <option value="high">High</option>
               <option value="low">Low</option>
             </select>
+            <select className="filter">
+              <option value="experience">Experience Level</option>
+              <option value="entry">Entry-level</option>
+              <option value="mid">Mid-level</option>
+              <option value="senior">Senior-level</option>
+              <option value="executive">Executive/Management</option>
+            </select>
+            <select className="filter">
+              <option value="salary">Work Environment</option>
+              <option value="Remote">Remote</option>
+              <option value="low">On-site</option>
+              <option value="Remote">Hybrid</option>
+            </select>
           </div>
-        </div>
-
-        <div className="hero-right">
-          <Link to="/login">
-            <button className="btn">Login</button>
-          </Link>
-          <Link to="/register">
-            <button className="btn">Register</button>
-          </Link>
         </div>
       </section>
       <Footer />
