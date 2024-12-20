@@ -1,13 +1,13 @@
+// src/pages/HomePage.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
-import "./HomePage.css";
+import "./HomePage.css"; // Import HomePage specific CSS
 
 const HomePage = () => {
   const navigate = useNavigate(); // Hook for navigation
 
-  // Placeholder data for jobs (can be replaced with dynamic data)
   const jobs = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     title: `Job Title ${i + 1}`,
@@ -16,8 +16,7 @@ const HomePage = () => {
   }));
 
   const handleAction = () => {
-    // Redirect the user to the login page
-    navigate("/login");
+    navigate("/login"); // Redirect to login page on Apply/Save click
   };
 
   return (

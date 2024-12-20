@@ -1,0 +1,113 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
+  
+  .dashboard-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between sections in the column */
+  }
+  
+  .user-column {
+    height: 100%; /* Ensures the user column fills the height */
+  }
+  
+  .user-section {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%; /* Allow the height to match the other columns */
+  }
+  
+  .user-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .user-details h3 {
+    font-size: 1.5rem;
+    color: #27001e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-details p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #27001e;
+    margin-bottom: 1rem;
+  }
+  
+  .section-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #208446;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Adjust the layout of columns to ensure equal height */
+  .dashboard-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem; /* Adds space between the sections within a column */
+  }
+  
+  /* Equalize height for all columns */
+  .column {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  

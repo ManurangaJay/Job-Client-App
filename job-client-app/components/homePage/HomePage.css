@@ -1,3 +1,4 @@
+/* src/pages/HomePage.css */
 .home-page {
   display: flex;
   flex-direction: column;
@@ -41,7 +42,7 @@
   font-size: 1.5rem;
   color: #27001e;
   margin-bottom: 1rem;
-  text-align: left; /* Aligns the text to the left */
+  text-align: left;
 }
 
 .jobs-grid {
@@ -103,6 +104,6 @@
 }
 
 .job-btn:hover {
-  background-color: #228b22; /* Slightly darker green */
+  background-color: #228b22;
   transform: scale(1.05);
 }

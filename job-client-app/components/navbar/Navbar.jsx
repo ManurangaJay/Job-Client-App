@@ -1,28 +1,23 @@
 import React from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { FaUser, FaBell, FaTachometerAlt } from "react-icons/fa"; // Import icons from react-icons
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/">JobHub</a>
+        <Link to="/">JobHub</Link> {/* Use Link for Home navigation */}
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link> {/* Home link */}
         </li>
         <li>
-          <a href="/jobs">Jobs</a>
+          <Link to="/jobs">Jobs</Link> {/* Jobs link */}
         </li>
         <li>
-          <a href="/companies">Companies</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/contact">Contact</a>
+          <Link to="/companies">Companies</Link> {/* Companies link */}
         </li>
       </ul>
       <div className="navbar-actions">
@@ -31,6 +26,17 @@ const Navbar = () => {
         </Link>
         <Link to="/register">
           <button className="btn navbar-btn">Register</button>
+        </Link>
+
+
+        {/* User Icon for Dashboard */}
+        <Link to="/dashboard">
+          <FaUser size={24} color="white" className="navbar-icon" />
+        </Link>
+
+        {/* Notification Icon */}
+        <Link to="/notifications">
+          <FaBell size={24} color="white" className="navbar-icon" />
         </Link>
       </div>
     </nav>
