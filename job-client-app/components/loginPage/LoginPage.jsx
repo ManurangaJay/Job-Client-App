@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import "./LoginPage.css";
@@ -7,12 +7,28 @@ import "./LoginPage.css";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Hook for navigation
 
+  // Predefined credentials for login
+  const predefinedCredentials = {
+    email: "user123@example.com",
+    password: "password123",
+  };
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logic for logging in (e.g., validation, API call, etc.)
-    console.log("Email:", email);
-    console.log("Password:", password);
+
+    // Check if the entered email and password match predefined credentials
+    if (email === predefinedCredentials.email && password === predefinedCredentials.password) {
+      console.log("Login Successful");
+
+      // Redirect to the dashboard after successful login
+      navigate("/dashboard");
+    } else {
+      console.log("Invalid credentials");
+      alert("Invalid email or password");
+    }
   };
 
   return (
