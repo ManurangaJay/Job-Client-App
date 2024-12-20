@@ -1,5 +1,5 @@
-// src/pages/LoginPage.jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import "./LoginPage.css";
@@ -47,6 +47,9 @@ const LoginPage = () => {
             Login
           </button>
         </form>
+        <p className="register-link">
+          Don’t have an account? <Link to="/register">Register here</Link>
+        </p>
       </div>
       <Footer />
     </div>

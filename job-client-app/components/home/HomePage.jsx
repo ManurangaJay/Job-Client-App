@@ -1,51 +1,60 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // For navigation
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import "./HomePage.css";
 
 const HomePage = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Placeholder data for jobs (can be replaced with dynamic data)
+  const jobs = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    title: `Job Title ${i + 1}`,
+    company: `Company ${i + 1}`,
+    image: "https://via.placeholder.com/150", // Placeholder image
+  }));
+
+  const handleAction = () => {
+    // Redirect the user to the login page
+    navigate("/login");
+  };
+
   return (
     <div className="home-page">
       <Navbar />
-      <section className="hero-section">
-        <div className="hero-content">
-          <input
-            type="text"
-            className="search-bar"
-            placeholder="Search for jobs..."
-          />
-          <div className="filters">
-            <select className="filter">
-              <option value="category">Category</option>
-              <option value="engineering">Engineering</option>
-              <option value="marketing">Marketing</option>
-            </select>
-            <select className="filter">
-              <option value="location">Location</option>
-              <option value="remote">Remote</option>
-              <option value="new-york">New York</option>
-            </select>
-            <select className="filter">
-              <option value="salary">Salary</option>
-              <option value="high">High</option>
-              <option value="low">Low</option>
-            </select>
-            <select className="filter">
-              <option value="experience">Experience Level</option>
-              <option value="entry">Entry-level</option>
-              <option value="mid">Mid-level</option>
-              <option value="senior">Senior-level</option>
-              <option value="executive">Executive/Management</option>
-            </select>
-            <select className="filter">
-              <option value="salary">Work Environment</option>
-              <option value="Remote">Remote</option>
-              <option value="low">On-site</option>
-              <option value="Remote">Hybrid</option>
-            </select>
-          </div>
+      <section className="welcome-section">
+        <div className="welcome-content">
+          <h1>Welcome to JobHub</h1>
+          <h2>Your Gateway to Endless Opportunities!</h2>
+          <p>
+            At JobHub, we connect talent with opportunity. Discover your dream job,
+            explore career paths, and take the next step toward success—all in one place!
+          </p>
         </div>
       </section>
+
+      <section className="jobs-section">
+        <h3>Related Jobs For You:</h3>
+        <div className="jobs-grid">
+          {jobs.map((job) => (
+            <div key={job.id} className="job-card">
+              <img src={job.image} alt={`${job.title}`} className="job-image" />
+              <h4>{job.title}</h4>
+              <p>{job.company}</p>
+              <div className="job-buttons">
+                <button className="job-btn apply-btn" onClick={handleAction}>
+                  Apply
+                </button>
+                <button className="job-btn save-btn" onClick={handleAction}>
+                  Save
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #27001e;
-    padding: 0.8rem 1.5rem;
+    background-color: #024670;
+    padding: 0.3rem 1.5rem;
     color: white;
     width: 100%;
     box-sizing: border-box;
@@ -21,15 +21,17 @@
   .navbar-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   
   .navbar-links li a {
     color: white;
+    font-weight: 500;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.5s;
+    font-size: 15px;
   }
   
   .navbar-links li a:hover {
@@ -46,7 +48,7 @@
   .navbar-btn {
     padding: 0.8rem 1.2rem;
     font-size: 0.9rem;
-    background-color: #340028;
+    background-color: #208446;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -55,8 +57,8 @@
   }
   
   .navbar-btn:hover {
-    background-color: #440235;
+    background-color: #065e28;
     transform: scale(1.1);
-    color: #ffd700;
+    /* color: #ffd700; */
   }
   

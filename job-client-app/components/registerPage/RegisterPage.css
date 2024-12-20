@@ -17,7 +17,7 @@
   
   h2 {
     font-size: 2rem;
-    color: #27001e;
+    color: #013758;
     margin-bottom: 1.5rem;
   }
   
@@ -27,7 +27,7 @@
     width: 100%;
     max-width: 400px;
     gap: 1.2rem;
-    background-color: #00000013;
+    background-color: #002df313;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -41,24 +41,27 @@
   
   label {
     font-size: 1rem;
-    color: #27001e;
+    color: #013758;
+    font-weight: 500;
   }
   
   input {
     padding: 0.8rem;
     font-size: 1rem;
     border-radius: 5px;
-    border: 2px solid #27001e; 
+    border: 2px solid #013758; 
     outline: none;
-    background-color: #e3d9e1; 
+    background-color: #c3d8db; 
+    color: black;
   }
   
   input:focus {
-    border-color: #5a0047;
+    border-color: #002c47;
+    background-color: rgb(255, 255, 255);
   }
   
   button.btn-register {
-    background-color: #27001e;
+    background-color: #024670;
     color: white;
     padding: 1rem;
     border: none;
@@ -66,9 +69,11 @@
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
   }
   
   button.btn-register:hover {
-    background-color: #5a0047;
+    background-color: #013758;
+    transform: scale(1.01);
   }
   
