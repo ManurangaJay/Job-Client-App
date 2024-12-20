@@ -30,6 +30,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.5s;
+  font-size: 15px;
 }
 
 .navbar-links li a:hover {
@@ -40,7 +41,6 @@
 .navbar-actions {
   display: flex;
   gap: 1rem;
-  align-items: center; /* Ensures the icons and buttons are aligned properly */
 }
 
 .navbar-btn {
@@ -51,7 +51,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar-btn:hover {
@@ -59,16 +59,41 @@
   transform: scale(1.1);
 }
 
-/* Styling the icons to match button styles */
-.navbar-actions a {
-  color: white;
-  display: inline-block;
-  padding: 0.8rem;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
+.notification-icon {
+  position: relative; /* Necessary for positioning the dropdown */
+  cursor: pointer;
 }
 
-.navbar-actions a:hover {
-  transform: scale(1.1); /* Only zoom effect on hover */
+.notification-dropdown {
+  position: absolute;
+  top: 30px; /* Position the dropdown just below the icon */
+  right: 0; /* Align to the right of the icon */
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 200px;
+  z-index: 100; /* Ensure it appears above other elements */
 }
 
+.notification-dropdown ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.notification-dropdown li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.notification-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.notification-dropdown li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
