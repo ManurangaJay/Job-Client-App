@@ -8,6 +8,7 @@ import RegisterPage from "../components/registerPage/RegisterPage"; // Correct p
 import Dashboard from "../components/dashboard/Dashboard"; // Correct path for Dashboard
 import JobDetailsPage from "../components/jobDetailsPage/JobDetailsPage"; // Import JobDetailsPage
 import "./App.css";
+import CompanyDetailsPage from "../components/companyDetailsPage/CompanyDetailsPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/companies/:companyId" element={<CompanyDetailsPage />} />
       </Routes>
     </Router>
   );

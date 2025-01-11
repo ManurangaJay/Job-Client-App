@@ -16,8 +16,8 @@ const CompaniesPage = () => {
     }))
   );
 
-  const handleSave = () => {
-    navigate("/login"); // Redirect to login page on Save button click
+  const handleNavigate = (id) => {
+    navigate(`/companies/${id}`); // Redirect to company details page
   };
 
   return (
@@ -60,7 +60,11 @@ const CompaniesPage = () => {
       <section className="companies-section">
         <div className="companies-grid">
           {companies.map((company) => (
-            <div key={company.id} className="company-card">
+            <div
+              key={company.id}
+              className="company-card"
+              onClick={() => handleNavigate(company.id)}
+            >
               <img
                 src={company.image}
                 alt={`${company.name}`}
@@ -68,9 +72,6 @@ const CompaniesPage = () => {
               />
               <h4>{company.name}</h4>
               <p>{company.description}</p>
-              <button className="company-btn save-btn" onClick={handleSave}>
-                Save
-              </button>
             </div>
           ))}
         </div>
