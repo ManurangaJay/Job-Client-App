@@ -6,6 +6,7 @@ import CompaniesPage from "../components/companiesPage/CompaniesPage"; // Correc
 import LoginPage from "../components/loginPage/LoginPage"; // Correct path for LoginPage
 import RegisterPage from "../components/registerPage/RegisterPage"; // Correct path for RegisterPage
 import Dashboard from "../components/dashboard/Dashboard"; // Correct path for Dashboard
+import JobDetailsPage from "../components/jobDetailsPage/JobDetailsPage"; // Import JobDetailsPage
 import "./App.css";
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/jobs/:jobId" element={<JobDetailsPage />} /> {/* Added route */}
         <Route path="/companies" element={<CompaniesPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={<Dashboard />} /> 
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );

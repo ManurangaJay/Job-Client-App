@@ -23,6 +23,9 @@ const LoginPage = () => {
     if (email === predefinedCredentials.email && password === predefinedCredentials.password) {
       console.log("Login Successful");
 
+      // Store login status in localStorage
+      localStorage.setItem("isLoggedIn", true);
+
       // Redirect to the dashboard after successful login
       navigate("/dashboard");
     } else {
