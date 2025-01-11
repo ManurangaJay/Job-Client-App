@@ -20,7 +20,7 @@ const ReviewPage = () => {
   const handleSubmitReview = () => {
     // Logic for submitting the review
     console.log("Review Submitted: ", { rating, reviewText });
-    navigate("/jobs"); // Navigate back to job list after submission
+    navigate("/jobs/:jobId"); // Navigate back to job list after submission
   };
 
   return (
