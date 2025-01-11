@@ -9,6 +9,7 @@ import Dashboard from "../components/dashboard/Dashboard"; // Correct path for D
 import JobDetailsPage from "../components/jobDetailsPage/JobDetailsPage"; // Import JobDetailsPage
 import "./App.css";
 import CompanyDetailsPage from "../components/companyDetailsPage/CompanyDetailsPage";
+import ApplyPage from "../components/applyPage/ApplyPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/companies/:companyId" element={<CompanyDetailsPage />} />
+        <Route path="/apply" element={<ApplyPage />} /> {/* Apply Page */}
       </Routes>
     </Router>
   );

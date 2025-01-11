@@ -1,0 +1,71 @@
+.apply-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .apply-container {
+    flex: 1;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .apply-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #013758;
+  }
+  
+  .apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .apply-form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .apply-form input,
+  .apply-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #c2e8ff;
+    color: black;
+  }
+  
+  .apply-form textarea {
+    resize: none;
+  }
+  
+  .apply-form input[type="file"] {
+    padding: 0.4rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #208446;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #176a36;
+  }
+  

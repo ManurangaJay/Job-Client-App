@@ -19,6 +19,10 @@ const JobsPage = () => {
     navigate(`/jobs/${jobId}`);
   };
 
+  const handleNavigateToApply = (jobId) => {
+    navigate(`/apply/${jobId}`);
+  };
+
   return (
     <div className="jobs-page">
       <Navbar />
@@ -74,14 +78,19 @@ const JobsPage = () => {
             <div key={job.id} className="job-card">
               <img
                 src={job.image}
-                alt={`${job.title}`}
+                alt={job.title}
                 className="job-image"
                 onClick={() => handleNavigateToDetails(job.id)} // Redirect to Job Details
               />
               <h4>{job.title}</h4>
               <p>{job.company}</p>
               <div className="job-buttons">
-                <button className="job-btn apply-btn">Apply</button>
+              <button
+              className="btn apply-btn"
+              onClick={() => navigate("/apply")} // Add navigate to Apply Page
+            >
+              Apply
+            </button>
                 <button className="job-btn save-btn">Save</button>
               </div>
             </div>
