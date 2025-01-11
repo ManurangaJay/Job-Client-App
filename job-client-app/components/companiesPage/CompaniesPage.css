@@ -145,4 +145,24 @@
     background-color: #228b22;
     transform: scale(1.05);
   }
+  .company-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
   
+  .company-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: green;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .company-btn:hover {
+    background-color: #228b22;
+    transform: scale(1.05);
+  }

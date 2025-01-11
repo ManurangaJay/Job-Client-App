@@ -72,6 +72,9 @@ const CompaniesPage = () => {
               />
               <h4>{company.name}</h4>
               <p>{company.description}</p>
+              <div className="company-buttons">
+                <button className="company-btn save-btn">Apply</button>
+              </div>
             </div>
           ))}
         </div>
