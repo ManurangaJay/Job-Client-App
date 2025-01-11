@@ -1,0 +1,81 @@
+/* This ensures the overall layout is full-width */
+.post-company-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.post-company-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem; /* Ensures there's some space between Navbar and content */
+}
+
+.post-company-page h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #208446;
+}
+
+.post-company-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(194, 242, 255); /* Ensure white background for all inputs and textareas */
+  color: #333; /* Ensure dark text for readability */
+}
+
+/* Specifically for textarea to allow vertical resizing */
+.input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button style */
+.btn-submit {
+  padding: 1rem;
+  background-color: #208446;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #065e28;
+}
+
+/* Ensure Navbar and Footer take full width */
+.navbar {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+}

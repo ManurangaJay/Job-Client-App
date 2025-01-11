@@ -1,9 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import Navbar from "../navbar/Navbar"; // Import Navbar
 import Footer from "../footer/Footer"; // Import Footer
 import "./Dashboard.css"; // Import CSS
 
 const Dashboard = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Handle logout
+  const handleLogout = () => {
+    const confirmLogout = window.confirm("Are you sure you want to log out?");
+    if (confirmLogout) {
+      // Clear login status from localStorage
+      localStorage.removeItem("isLoggedIn");
+
+      // Redirect to the login page after logout
+      navigate("/login");
+    }
+  };
+
   return (
     <div className="dashboard">
       <Navbar /> {/* Include Navbar */}
@@ -23,10 +38,14 @@ const Dashboard = () => {
                 <p>Email: user@example.com</p>
                 <p>Joined: January 2023</p>
               </div>
+              {/* Logout Button */}
+              <button className="btn logout-btn" onClick={handleLogout}>
+                Logout
+              </button>
             </div>
           </div>
 
-          {/* Second Column: Your Jobs and Skills */}
+          {/* Other columns as is */}
           <div className="column">
             <section className="jobs-section">
               <h3>Your Jobs</h3>
@@ -44,7 +63,6 @@ const Dashboard = () => {
             </section>
           </div>
 
-          {/* Third Column: Saved Jobs and Experiences */}
           <div className="column">
             <section className="saved-jobs-section">
               <h3>Saved Jobs</h3>
@@ -60,7 +78,6 @@ const Dashboard = () => {
             </section>
           </div>
 
-          {/* Fourth Column: Saved Companies and Interested Fields */}
           <div className="column">
             <section className="saved-companies-section">
               <h3>Saved Companies</h3>
