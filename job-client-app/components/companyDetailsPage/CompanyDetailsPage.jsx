@@ -38,7 +38,7 @@ const CompanyDetailsPage = () => {
           <div className="company-buttons">
             <button className="btn save-btn">Save</button>
             {/* Link the "Add a Review" button to the AddCompanyReviewPage */}
-            <Link to={`/review/${companyId}`} className="btn review-btn">
+            <Link to={`/reviewc/${companyId}`} className="btn review-btn">
               Add a Review
             </Link>
           </div>
