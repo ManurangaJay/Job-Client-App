@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import "./CompanyDetailsPage.css"; // Import specific CSS for this page
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 
 const CompanyDetailsPage = () => {
+  // Assuming the companyId is available (for demonstration purposes, we are using a placeholder)
+  const companyId = 1;  // You can dynamically set this based on the company you are displaying
+
   return (
     <div className="company-details-page">
       <Navbar />
@@ -33,7 +37,10 @@ const CompanyDetailsPage = () => {
           </p>
           <div className="company-buttons">
             <button className="btn save-btn">Save</button>
-            <button className="btn review-btn">Add a Review</button>
+            {/* Link the "Add a Review" button to the AddCompanyReviewPage */}
+            <Link to={`/review/${companyId}`} className="btn review-btn">
+              Add a Review
+            </Link>
           </div>
         </div>
       </div>

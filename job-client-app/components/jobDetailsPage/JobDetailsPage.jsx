@@ -17,6 +17,11 @@ const JobDetailsPage = () => {
     description: `Detailed description for Job ${jobId}`,
   };
 
+  const handleAddReview = () => {
+    // Navigate to the review page with the jobId as a parameter
+    navigate(`/review/${jobId}`);
+  };
+
   return (
     <div className="job-details-page">
       <Navbar />
@@ -38,7 +43,9 @@ const JobDetailsPage = () => {
         <div className="job-about-section">
           <h3>About the Job</h3>
           <p>{job.description}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat eros id venenatis pulvinar. Ut sit amet ligula sed risus feugiat posuere.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            volutpat eros id venenatis pulvinar. Ut sit amet ligula sed risus
+            feugiat posuere.
           </p>
           <div className="job-buttons">
             <button
@@ -48,7 +55,12 @@ const JobDetailsPage = () => {
               Apply
             </button>
             <button className="btn save-btn">Save</button>
-            <button className="btn review-btn">Add a Review</button>
+            <button
+              className="btn review-btn"
+              onClick={handleAddReview} // Link to the review page
+            >
+              Add a Review
+            </button>
           </div>
         </div>
       </div>
