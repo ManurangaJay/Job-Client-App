@@ -40,6 +40,29 @@ const JobsPage = () => {
               <option value="engineering">Engineering</option>
               <option value="marketing">Marketing</option>
             </select>
+            <select className="filter">
+              <option value="location">Location</option>
+              <option value="remote">Remote</option>
+              <option value="new-york">New York</option>
+            </select>
+            <select className="filter">
+              <option value="salary">Salary</option>
+              <option value="high">High</option>
+              <option value="low">Low</option>
+            </select>
+            <select className="filter">
+              <option value="experience">Experience Level</option>
+              <option value="entry">Entry-level</option>
+              <option value="mid">Mid-level</option>
+              <option value="senior">Senior-level</option>
+              <option value="executive">Executive/Management</option>
+            </select>
+            <select className="filter">
+              <option value="work-environment">Work Environment</option>
+              <option value="remote">Remote</option>
+              <option value="on-site">On-site</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
             {/* Additional filters */}
           </div>
         </div>
